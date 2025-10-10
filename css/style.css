@@ -1119,3 +1119,58 @@ h1, h2, h3, h4, h5,
   .post-meta a {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+
+.post-entry > a {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.post-entry .caption {
+  pointer-events: none;
+}
+
+.post-entry .caption * {
+  pointer-events: auto;
+}
+
+.post-entry a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.post-entry a .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none; /* Permet au clic de passer à travers */
+}
+
+.post-entry a .caption .caption-inner {
+  pointer-events: none;
+}
+
+.post-entry a .caption .caption-inner * {
+  pointer-events: none;
+}
+
+.latest-news {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 40px;
+}
+
+.latest-news .row .col-md-4 {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 50px;
+}
+
+.post-entry img {
+  border: 5px solid white;
+  border-radius: 10px;
+}
