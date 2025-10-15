@@ -896,7 +896,7 @@ h1, h2, h3, h4, h5,
 .title-section {
   margin-bottom: 30px; }
   .title-section .heading {
-    color: #fff;
+    color:red;
     font-size: 20px;
     position: relative;
     padding-left: 30px; }
@@ -1171,6 +1171,211 @@ h1, h2, h3, h4, h5,
 }
 
 .post-entry img {
-  border: 5px solid white;
+  border: 5px solid black;
   border-radius: 10px;
+}
+
+/* =========================================================
+   STYLES GLOBAUX ET MISE EN PAGE
+   ========================================================= */
+body {
+    font-family: sans-serif; 
+    background-color: #f0f0f0; /* Fond gris clair pour la page entière */
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal de la page */
+.page-container {
+    max-width: 1200px;
+    /* CORRECTION DU CHEVAUCHEMENT : Décale le contenu sous le header fixe */
+    padding-top: 100px; 
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Conteneur du tableau et du titre (la carte blanche) */
+.table-wrapper-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Style du titre principal ("CLASSEMENT DES ÉQUIPES 2025") */
+.main-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   STYLES DU HEADER DE NAVIGATION (Logo F1)
+   ========================================================= */
+
+/* Header fixe (pour le logo F1) */
+.site-navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* CHANGEMENT FINAL : Fond noir pour le header */
+    background-color: #000000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style du logo ou du texte dans le header pour être visible sur fond noir */
+.site-navbar .site-logo {
+    color: #ffffff; 
+}
+.site-navbar .contact-link { 
+    color: #ffffff;
+    text-decoration: none;
+}
+.site-logo img {
+    max-height: 40px;
+}
+
+/* =========================================================
+   STYLES DES TABLEAUX (CLASSEMENT ET COURSES)
+   ========================================================= */
+
+.f1-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* En-tête du tableau (
+
+/* =========================================================
+   STYLES GLOBAUX ET MISE EN PAGE DE LA CARTE
+   ========================================================= */
+body {
+    font-family: sans-serif; 
+    background-color: #f0f0f0; /* Fond de la page */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header de navigation (Logo F1) - Position fixe et fond noir */
+.site-navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #000000; /* Fond noir */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* Conteneur principal (pour décaler le contenu sous le header fixe) */
+.page-container {
+    max-width: 1200px;
+    padding-top: 100px; 
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Conteneur du tableau (la carte blanche) */
+.table-wrapper-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Style du titre principal ("Classement des Pilotes 2025") */
+.main-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   STYLES DU TABLEAU DE CLASSEMENT DES PILOTES
+   ========================================================= */
+
+.f1-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* En-tête du tableau (POS., CONDUCTEUR, etc.) */
+.f1-table thead th {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666; /* Gris pour les titres de colonne */
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd; /* Ligne sous le header du tableau */
+    letter-spacing: 0.5px;
+}
+
+/* Cellules du corps du tableau */
+.f1-table tbody td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eee; /* Lignes de séparation fines */
+    vertical-align: middle;
+    background-color: transparent !important; /* Pas de fond coloré */
+}
+
+/* Lignes sans bordure gauche colorée ni fond */
+.f1-table tbody tr {
+    border-left: 5px solid transparent; 
+    background-color: transparent !important;
+}
+
+/* ---------------------------------------------------------
+   STYLES SPÉCIFIQUES AUX COLONNES
+   --------------------------------------------------------- */
+
+/* Masquer les icônes de pilotes et les logos d'équipe */
+.driver-icon,
+.team-logo-icon {
+    display: none !important;
+}
+.driver-name-container,
+.team-name-display {
+    display: block; /* Supprime l'effet flex laissé par les icônes masquées */
+}
+
+/* Position */
+.pos-cell {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Nom du pilote */
+.driver-name-text {
+    font-weight: 700;
+}
+
+/* Points */
+.points-cell {
+    font-weight: 700;
+    text-align: right;
+    color: #d80027; /* Couleur rouge F1 pour les points */
+}
+
+/* Autres alignements à droite */
+.align-right {
+    text-align: right;
 }
