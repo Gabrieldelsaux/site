@@ -1,0 +1,129 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STYLES DU CORPS DE PAGE (BODY) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 80px; 
+}
+
+/* ------------------- 🏎️ HEADER / NAVBAR (CORRECTION DÉFINITIVE) ------------------- */
+
+/* Cible le premier conteneur (la navbar) pour le rendre NOIR, FIXE, et PLEINE LARGEUR */
+body > .container:first-of-type {
+    /* CLÉ 4 : AJOUT DE LA LARGEUR MAXIMALE POUR ANNULER L'EFFET DE BOOTSTRAP */
+    max-width: 100% !important; 
+    
+    /* Positionnement et taille */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100% !important; /* Ajout du !important pour être certain */
+    z-index: 2000; 
+    
+    /* Couleur */
+    background-color: #000000 !important;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    /* Retrait des marges et ajustement du padding */
+    margin: 0 !important;
+    padding: 15px 40px !important;
+}
+
+/* S'assurer que les éléments internes n'ont pas de fond indésirable */
+body > .container:first-of-type * {
+    background-color: transparent !important;
+}
+
+/* Styles pour les éléments internes (inchangés) */
+.d-flex { display: flex; align-items: center; }
+.ml-auto { margin-left: auto; }
+.site-logo img { height: 50px; width: auto; display: block; }
+.site-logo a { display: block; }
+
+/* MENU NAVIGATION */
+.site-menu { 
+    list-style: none; 
+    margin: 0 !important; 
+    padding: 0 !important; 
+    display: flex !important; 
+    gap: 0;
+}
+
+.site-menu li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.site-menu a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 25px 25px !important;
+    display: block !important;
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+    border-bottom: 3px solid transparent !important;
+}
+
+.site-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.site-menu li.active a {
+    border-bottom: 3px solid #e10600 !important; /* Rouge F1 */
+}
+
+/* ------------------- 📄 CONTENU CV (Le deuxième conteneur) ------------------- */
+
+/* Cible le deuxième conteneur (le CV) */
+body > .container:nth-of-type(2) {
+    /* Le CV doit rester centré avec une largeur limitée */
+    max-width: 850px;
+    margin: 40px auto !important;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style de l'en-tête du CV */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+/* ... (Le reste des styles du CV reste le même) ... */
+.header h1 { font-size: 2.5em; margin-bottom: 10px; font-weight: 700; }
+.header .title { font-size: 1.3em; opacity: 0.95; font-weight: 300; }
+.contact-info { display: flex; justify-content: center; gap: 25px; margin-top: 20px; flex-wrap: wrap; font-size: 0.95em; }
+.contact-info span { display: flex; align-items: center; gap: 5px; }
+.content { padding: 40px; }
+.section { margin-bottom: 30px; }
+.section h2 { color: #667eea; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+.profile-text { color: #555; text-align: justify; }
+.experience-item, .education-item { margin-bottom: 25px; }
+.experience-item h3, .education-item h3 { color: #333; font-size: 1.2em; margin-bottom: 5px; }
+.company, .institution { color: #667eea; font-weight: 600; margin-bottom: 5px; }
+.date { color: #888; font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
+.experience-item ul, .responsibilities { margin-left: 20px; color: #555; }
+.experience-item li { margin-bottom: 5px; }
+.section ul { margin-left: 20px; color: #555; }
+.section li { margin-bottom: 8px; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.skill-category h4 { color: #333; margin-bottom: 10px; font-size: 1.1em; }
+.skill-category ul { list-style: none; }
+.skill-category li { padding: 6px 0; color: #555; position: relative; padding-left: 20px; }
+.skill-category li:before { content: "•"; color: #667eea; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
