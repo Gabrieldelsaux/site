@@ -2,701 +2,623 @@
    BASE ET TYPOGRAPHIE
    ========================================================= */
 body {
-  line-height: 1.8;
-  color: #999;
-  font-weight: 300;
-  background-color: #f0f0f0;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    line-height: 1.8;
+    color: #999;
+    font-weight: 300;
+    background-color: #f0f0f0;
+    /* Réduction de la taille de police générale */
+    font-size: 16px; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 html {
-  overflow-x: hidden;
-}
-
-::-moz-selection {
-  background: #000;
-  color: #fff;
-}
-
-::selection {
-  background: #000;
-  color: #fff;
+    overflow-x: hidden;
 }
 
 a {
-  transition: .3s all ease;
-  text-decoration: none;
+    transition: .3s all ease;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
-}
-
-/* =========================================================
-   UTILITAIRES
-   ========================================================= */
-.border-2 {
-  border-width: 2px;
-}
-
-.text-black {
-  color: #000 !important;
-}
-
-.bg-black {
-  background: #000 !important;
-}
-
-.color-black-opacity-5 {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.color-white-opacity-5 {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.line-height-1 {
-  line-height: 1 !important;
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #fff;
 }
 
 /* =========================================================
-   BOUTONS
+   NAVBAR (RÉTRÉCIE)
    ========================================================= */
-.btn {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 900;
-  border-width: 2px;
-  padding: 12px 30px;
+.site-navbar {
+    margin-bottom: 0px;
+    z-index: 1999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Réduction du padding vertical pour moins de hauteur */
+    padding: 12px 60px; 
 }
 
-.btn:hover, .btn:active, .btn:focus {
-  outline: none;
-  box-shadow: none !important;
-}
-
-.btn.btn-primary:hover {
-  border-color: #fff;
-  background: transparent;
-  color: #fff;
-}
-
-.btn.btn-black {
-  border-width: 2px;
-  border-color: #000;
-  background: #000;
-  color: #fff;
-}
-
-.btn.btn-black:hover {
-  color: #000;
-  background-color: transparent;
-}
-
-.btn.btn-white {
-  border-width: 2px;
-  border-color: #fff;
-  background: #fff;
-  color: #000;
-}
-
-.btn.btn-white:hover {
-  color: #fff;
-  background-color: transparent;
-}
-
-/* =========================================================
-   FORMULAIRES
-   ========================================================= */
-.form-control {
-  height: 50px;
-  border-radius: 4px;
-  background: none;
-  border-width: 1px;
-  color: #fff !important;
-  border-color: rgba(255, 255, 255, 0.2);
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  padding: 12px 20px;
-}
-
-.form-control:active, .form-control:focus {
-  border-color: #ee1e46;
-  background: none;
-}
-
-.form-control:hover, .form-control:active, .form-control:focus {
-  box-shadow: none !important;
-}
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-.site-section {
-  padding: 80px 0;
-}
-
-@media (min-width: 768px) {
-  .site-section {
-    padding: 100px 0;
-  }
-}
-
-.site-section.site-section-sm {
-  padding: 60px 0;
-}
-
-.site-section-heading {
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 30px;
-  margin-bottom: 0px;
-  position: relative;
-  font-size: 42px;
-  font-weight: 900;
-}
-
-/* =========================================================
-   HEADER / NAVBAR
-   ========================================================= */
 .site-logo {
-  position: relative;
-  font-weight: 900;
-  font-size: 1.8rem;
+    position: relative;
+    font-weight: 900;
+    font-size: 1.8rem;
 }
 
 .site-logo a {
-  color: #fff;
+    color: #fff;
 }
 
 .site-logo img {
-  max-height: 70px;
-  width: auto;
-}
-
-.site-navbar {
-  margin-bottom: 0px;
-  z-index: 1999;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  padding: 30px 60px;
-  display: flex;
-  align-items: center;
-}
-
-.site-navbar .container-fluid {
-  padding-left: 60px;
-  padding-right: 60px;
+    /* Taille du logo conservée ou réduite à 50px */
+    max-height: 50px; 
+    width: auto;
 }
 
 .site-navbar .site-navigation .site-menu {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .site-navbar .site-navigation .site-menu .active > a {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
 
 .site-navbar .site-navigation .site-menu .active > a:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 20px;
-  height: 2px;
-  background: #fff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: #fff;
 }
 
 .site-navbar .site-navigation .site-menu a {
-  text-decoration: none !important;
-  display: inline-block;
+    text-decoration: none !important;
+    display: inline-block;
 }
 
 .site-navbar .site-navigation .site-menu > li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .site-navbar .site-navigation .site-menu > li > a {
-  padding: 12px 30px;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: .15rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  display: inline-block;
-  text-decoration: none !important;
+    /* Réduction du padding autour des liens de navigation */
+    padding: 8px 18px; 
+    color: #fff;
+    font-size: 15px; /* Réduction de la taille d'écriture */
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none !important;
 }
 
 .site-navbar .site-navigation .site-menu > li > a:hover {
-  color: #ee1e46;
-}
-
-.site-navbar .contact-link {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ee1e46;
 }
 
 /* =========================================================
-   MENU MOBILE
+   MENU MOBILE (INCHANGÉ)
    ========================================================= */
 .site-mobile-menu {
-  width: 300px;
-  position: fixed;
-  right: 0;
-  z-index: 2000;
-  padding-top: 20px;
-  background: #fff;
-  height: calc(100vh);
-  transform: translateX(110%);
-  box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
-  transition: .3s all ease-in-out;
+    width: 300px;
+    position: fixed;
+    right: 0;
+    z-index: 2000;
+    padding-top: 20px;
+    background: #fff;
+    height: calc(100vh);
+    transform: translateX(110%);
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    transition: .3s all ease-in-out;
 }
 
 .offcanvas-menu .site-mobile-menu {
-  transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.site-menu-toggle {
+    color: #fff !important;
 }
 
 /* =========================================================
-   CONTENEUR PRINCIPAL
+   HERO SECTION (RÉTRÉCIE)
+   ========================================================= */
+.hero {
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.hero.overlay:before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-weight: 700;
+    /* Réduction de la taille du titre principal */
+    font-size: 3.5rem; 
+    margin-bottom: 20px; /* Réduction de la marge */
+}
+
+.hero h2 {
+    color: rgba(255, 255, 255, 0.7);
+    /* Réduction de la taille d'écriture */
+    font-size: 18px; 
+}
+
+/* =========================================================
+   ÉQUIPES VS (Page d'accueil) - SÉPARATION VERTICALE NETTE
+   ========================================================= */
+
+/* Conteneur Flex pour les deux cartes */
+.team-vs {
+    background-color: #0d0f13; 
+    overflow: hidden;
+    border-radius: 15px;
+    /* Réduction du chevauchement avec la section Hero */
+    margin-top: -60px; 
+    position: relative;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    /* Réduction de la hauteur minimale */
+    min-height: 220px; 
+    display: flex;
+}
+
+/* Style de base des cartes .team-1 et .team-2 (vos sélecteurs HTML) */
+.team-vs .team-1,
+.team-vs .team-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* 1. MCLAREN (team-1) : COULEUR ET SÉPARATION DROITE */
+.team-vs .team-1 {
+    background: none !important;
+    background-color: #ff8700 !important; 
+    z-index: 2; 
+    clip-path: none; 
+    border-radius: 15px 0 0 15px;
+}
+
+/* 2. MERCEDES (team-2) : COULEUR ET SÉPARATION GAUCHE */
+.team-vs .team-2 {
+    background: #383838; 
+    z-index: 1;
+    margin-left: 0; 
+    border-radius: 0 15px 15px 0;
+}
+
+/* Styles internes */
+.team-vs .team-details {
+    /* Réduction du padding interne des cartes d'équipe */
+    padding: 30px 20px; 
+}
+
+/* LOGOS */
+.team-vs .team-details img {
+    /* Taille des logos conservée ou réduite à 100px */
+    width: 100px; 
+    height: auto;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* TITRES D'ÉQUIPE (h3) */
+.team-vs h3 {
+    /* Réduction de la taille du titre d'équipe */
+    font-size: 22px; 
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+/* CLASSEMENT TOP 1 / TOP 2 (h4) : BLANC */
+.team-vs h4 { 
+    color: #ffffff !important; 
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 10px; /* Réduction de l'espace après le classement */
+    font-size: 16px; /* Réduction de la taille du classement */
+}
+
+/* PILOTES (ul li) */
+.team-vs .team-details ul {
+    padding: 0;
+    list-style: none;
+}
+
+.team-vs .team-details ul li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px; /* Réduction de l'espace entre les pilotes */
+    font-size: 14px; /* Réduction de la taille d'écriture */
+}
+
+/* Nettoyage des <hr> dans la carte Mercedes */
+.team-vs .team-2 hr {
+    display: none;
+}
+
+/* =========================================================
+   ACTUALITÉS (RÉTRÉCIES)
+   ========================================================= */
+.latest-news {
+    /* Réduction du padding des actualités */
+    padding: 70px 40px; 
+    margin-bottom: 30px;
+}
+
+.latest-news .title-section {
+    margin-bottom: 30px;
+}
+
+.latest-news .title-section .heading {
+    /* Réduction de la taille du titre de section */
+    font-size: 32px; 
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+}
+
+.latest-news .row .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px; /* Réduction de la marge basse */
+}
+
+.latest-news .post-entry {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Légère réduction de l'ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.latest-news .post-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.latest-news .post-entry img {
+    transition: .3s all ease;
+    transform: scale(1);
+    border: 4px solid black; /* Réduction de la bordure */
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    /* Réduction de la hauteur minimale des images d'actualité */
+    min-height: 250px; 
+    object-fit: cover;
+}
+
+.latest-news .post-entry:before {
+    content: "";
+    width: 0;
+    height: 4px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s all ease;
+    background-color: #ee1e46;
+    z-index: 2;
+}
+
+.latest-news .post-entry .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+.latest-news .post-entry .caption:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s all ease;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.latest-news .post-entry .caption .caption-inner {
+    position: absolute;
+    bottom: 20px; /* Réduction de l'espacement interne */
+    left: 20px; 
+    right: 20px; 
+    pointer-events: none;
+}
+
+.latest-news .post-entry .caption .caption-inner h3 {
+    /* Réduction de la taille du titre de l'article */
+    font-size: 18px; 
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.latest-news .post-entry .author {
+    display: flex;
+    align-items: center;
+}
+
+.latest-news .post-entry .author .img {
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.latest-news .post-entry .author .img img {
+    width: 35px; /* Réduction de la taille de la photo de l'auteur */
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    min-height: auto;
+}
+
+.latest-news .post-entry .author .text h4 {
+    /* Réduction de la taille d'écriture */
+    font-size: 13px; 
+    margin-bottom: 2px;
+    color: #fff;
+}
+
+.latest-news .post-entry .author .text span {
+    /* Réduction de la taille d'écriture */
+    font-size: 11px; 
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.latest-news .post-entry:hover img {
+    transform: scale(1.05);
+}
+
+.latest-news .post-entry:hover .caption:before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.latest-news .post-entry:hover:before {
+    width: 100%;
+}
+
+/* =========================================================
+   SECTION SOMBRE (Prochain GP) - RÉTRÉCIE
+   ========================================================= */
+.site-section.bg-dark {
+    background: #0d0f13;
+    /* Réduction du padding de la section */
+    padding: 50px 0; 
+}
+
+.widget-next-match {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.widget-title {
+    /* Réduction du padding du titre de widget */
+    padding: 12px 18px; 
+    color: #fff;
+    background-color: #ee1e46;
+}
+
+.widget-title h3 {
+    margin: 0;
+    padding: 0;
+    /* Réduction de la taille d'écriture */
+    font-size: 15px; 
+    color: #fff;
+    font-weight: 700;
+}
+
+.widget-body {
+    /* Réduction du padding du corps du widget */
+    padding: 18px; 
+}
+
+.widget-vs h4 {
+    /* Réduction de la taille des titres de match */
+    font-size: 18px; 
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.widget-vs-contents p {
+    /* Réduction de la taille d'écriture */
+    font-size: 14px; 
+}
+
+
+/* =========================================================
+   TABLEAUX (Page Classement) - RÉTRÉCIS
    ========================================================= */
 .page-container {
-  max-width: 1400px;
-  padding-top: 140px;
-  margin: 0 auto;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 60px;
+    max-width: 1200px; 
+    padding-top: 90px; /* Ajuste le padding pour le nouveau header */
+    margin: 0 auto;
+    padding-left: 40px; 
+    padding-right: 40px; 
+    padding-bottom: 30px; 
 }
 
-/* =========================================================
-   CARTE DU TABLEAU
-   ========================================================= */
 .table-wrapper-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  margin-bottom: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px; /* Réduction du padding autour du tableau */
+    margin-bottom: 25px;
 }
 
 .main-title {
-  font-size: 42px;
-  font-weight: 900;
-  color: #000000;
-  text-align: left;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* =========================================================
-   TABLEAUX F1
-   ========================================================= */
-.f1-table {
-  width: 100%;
-  border-collapse: collapse;
+    /* Réduction de la taille du titre */
+    font-size: 28px; 
+    font-weight: 900;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .f1-table thead th {
-  font-size: 14px;
-  font-weight: 700;
-  color: #666;
-  text-transform: uppercase;
-  text-align: left;
-  padding: 20px;
-  border-bottom: 2px solid #ddd;
-  letter-spacing: 0.5px;
+    /* Réduction de la taille d'écriture */
+    font-size: 11px;
+    padding: 12px;
 }
 
 .f1-table tbody td {
-  padding: 25px 20px;
-  font-size: 18px;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  vertical-align: middle;
-  background-color: transparent !important;
+    padding: 12px 15px; 
+    /* Réduction de la taille d'écriture */
+    font-size: 14px;
 }
 
-.f1-table tbody tr {
-  border-left: 5px solid transparent;
-  background-color: transparent !important;
-  transition: background-color 0.2s ease;
+.pos-cell {
+    /* Réduction de la taille d'écriture */
+    font-size: 16px;
 }
 
-.f1-table tbody tr:hover {
-  background-color: #f8f8f8 !important;
+.driver-name-text {
+    /* Réduction de la taille d'écriture */
+    font-size: 15px;
+}
+
+.team-name-display {
+    /* Réduction de la taille d'écriture */
+    font-size: 13px;
+}
+
+.points-cell {
+    /* Réduction de la taille d'écriture */
+    font-size: 16px;
 }
 
 /* Masquer les icônes */
 .driver-icon,
 .team-logo-icon {
-  display: none !important;
-}
-
-.driver-name-container,
-.team-name-display {
-  display: block;
-}
-
-/* Colonnes spécifiques */
-.pos-cell {
-  font-weight: 900;
-  color: #333;
-  font-size: 20px;
-}
-
-.driver-name-text {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.team-name-display {
-  font-size: 16px;
-  color: #666;
-}
-
-.points-cell {
-  font-weight: 900;
-  text-align: right;
-  color: #d80027;
-  font-size: 20px;
-}
-
-.align-right {
-  text-align: right;
+    display: none !important;
 }
 
 /* =========================================================
-   HERO SECTION
+   FOOTER (RÉTRÉCI)
    ========================================================= */
-.hero {
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
+footer {
+    background: #1a1e25;
+    color: rgba(255, 255, 255, 0.5);
+    /* Réduction du padding du footer */
+    padding: 15px 40px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Réduction de la taille d'écriture */
+    font-size: 14px; 
 }
 
-.hero, .hero > .container > .row {
-  height: 100vh;
-  min-height: 100vh;
+footer a {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.hero.overlay:before {
-  content: "";
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-weight: 700;
-  font-size: 5rem;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 991.98px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-}
-
-.hero p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 20px;
+footer a:hover {
+    color: #ee1e46;
 }
 
 /* =========================================================
-   ÉQUIPES VS
-   ========================================================= */
-.team-vs {
-  background-color: #0d0f13;
-  overflow: hidden;
-  border-radius: 15px;
-  margin-top: -120px;
-  position: relative;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
-  padding: 60px 40px;
-  min-height: 250px;
-}
-
-.team-vs .score {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 5rem;
-  font-weight: 700;
-  z-index: 2;
-  letter-spacing: .3em;
-}
-
-.team-vs h3 {
-  font-size: 28px;
-  color: #fff;
-  font-weight: 900;
-  margin-bottom: 25px;
-}
-
-.team-vs .team-details img {
-  width: 150px;
-  height: auto;
-}
-
-.team-vs .team-1, .team-vs .team-2 {
-  padding: 40px;
-}
-
-.team-vs .team-details {
-  position: relative;
-  z-index: 2;
-}
-
-/* =========================================================
-   ACTUALITÉS
-   ========================================================= */
-.latest-news {
-  padding: 120px 60px;
-  margin-bottom: 60px;
-}
-
-.latest-news .row .col-md-4 {
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 60px;
-}
-
-.latest-news .post-entry {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 50px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.latest-news .post-entry:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-}
-
-.latest-news .post-entry img {
-  transition: .3s all ease;
-  transform: scale(1);
-  border: 8px solid black;
-  border-radius: 15px;
-  width: 100%;
-  height: auto;
-  min-height: 400px;
-  object-fit: cover;
-}
-
-.latest-news .post-entry:before {
-  content: "";
-  width: 0;
-  height: 6px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: .3s all ease;
-  background-color: #ee1e46;
-  z-index: 2;
-}
-
-.latest-news .post-entry .caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  pointer-events: none;
-  border-radius: 15px;
-}
-
-.latest-news .post-entry .caption:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: .3s all ease;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 15px;
-}
-
-.latest-news .post-entry .caption .caption-inner {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  right: 40px;
-  pointer-events: none;
-}
-
-.latest-news .post-entry .caption .caption-inner h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.4;
-  margin-bottom: 15px;
-}
-
-.latest-news .post-entry .author .text h4 {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.latest-news .post-entry .author .text span {
-  font-size: 14px;
-}
-
-.latest-news .post-entry:hover img {
-  transform: scale(1.1);
-}
-
-.latest-news .post-entry:hover .caption:before {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.latest-news .post-entry:hover:before {
-  width: 100%;
-}
-
-/* =========================================================
-   WIDGETS
-   ========================================================= */
-.widget-next-match {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.widget-vs {
-  width: 100%;
-}
-
-.widget-vs img {
-  max-width: 120px;
-}
-
-.widget-vs h3 {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.widget-vs .vs > span {
-  display: inline-block;
-  font-size: 14px;
-  background: #ee1e46;
-  padding: 8px 25px;
-  border-radius: 30px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.widget-title {
-  padding: 20px 25px;
-  color: #fff;
-  background-color: #ee1e46;
-}
-
-.widget-title h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.widget-body {
-  padding: 25px;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-.footer-section {
-  padding: 80px 0;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.5);
-  background: #1a1e25;
-}
-
-.footer-section .widget h3 {
-  color: #fff;
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
-.footer-section .widget .links li {
-  margin-bottom: 12px;
-}
-
-.footer-section .widget .links li a {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-section .widget .links li a:hover {
-  color: #ee1e46;
-}
-
-/* =========================================================
-   RESPONSIVE
+   RESPONSIVE (AJUSTÉ)
    ========================================================= */
 @media (max-width: 991.98px) {
-  .page-container {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 100px;
-  }
+    .hero h1 {
+        font-size: 2rem; /* Réduction mobile du titre Hero */
+    }
+    
+    .hero h2 {
+        font-size: 16px;
+    }
 
-  .table-wrapper-card {
-    padding: 30px;
-  }
+    .page-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 70px; 
+    }
 
-  .main-title {
-    font-size: 28px;
-  }
+    .table-wrapper-card {
+        padding: 15px;
+    }
 
-  .f1-table tbody td {
-    padding: 15px 10px;
-    font-size: 14px;
-  }
+    .main-title {
+        font-size: 20px;
+    }
 
-  .site-navbar {
-    padding: 20px 30px;
-  }
+    .f1-table tbody td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
 
-  .site-logo img {
-    max-height: 50px;
-  }
+    .site-navbar {
+        padding: 8px 15px; /* Ajustement mobile du header */
+    }
+
+    .site-logo img {
+        max-height: 35px; /* Ajustement mobile du logo */
+    }
+
+    .latest-news {
+        padding: 30px 10px; 
+    }
+    
+    .latest-news .post-entry .caption .caption-inner h3 {
+        font-size: 16px;
+    }
+    
+    .latest-news .post-entry .author .text h4 {
+        font-size: 12px;
+    }
+    
+    .team-vs .team-details {
+        padding: 20px 15px;
+    }
+
+    .team-vs h3 {
+        font-size: 16px;
+    }
+
+    .team-vs .team-details img {
+        width: 70px;
+    }
 }
