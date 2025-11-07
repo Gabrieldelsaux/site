@@ -1,4 +1,13 @@
 /* =========================================================
+   RESET ET BASE
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
    BASE ET TYPOGRAPHIE
    ========================================================= */
 body {
@@ -6,11 +15,11 @@ body {
     color: #999;
     font-weight: 300;
     background-color: #f0f0f0;
-    /* Réduction de la taille de police générale */
     font-size: 16px; 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -33,6 +42,151 @@ h1, h2, h3, h4,
 }
 
 /* =========================================================
+   STYLES CV - BODY ET CONTAINER
+   ========================================================= */
+body.cv-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 100px 20px 40px 20px; /* Padding top augmenté pour la navbar */
+    min-height: 100vh;
+}
+
+.cv-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header CV (avec dégradé violet) */
+.cv-container .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.cv-container .header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.cv-container .header .title {
+    font-size: 1.3em;
+    opacity: 0.95;
+    font-weight: 300;
+    color: white;
+}
+
+.cv-container .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 0.95em;
+    color: white;
+}
+
+.cv-container .contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Contenu CV */
+.cv-container .content {
+    padding: 40px;
+}
+
+.cv-container .section {
+    margin-bottom: 30px;
+}
+
+.cv-container .section h2 {
+    color: #667eea;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.cv-container .profile-text {
+    color: #555;
+    text-align: justify;
+}
+
+.cv-container .experience-item, 
+.cv-container .education-item {
+    margin-bottom: 25px;
+}
+
+.cv-container .experience-item h3, 
+.cv-container .education-item h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.cv-container .company, 
+.cv-container .institution {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cv-container .date {
+    color: #888;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.cv-container .experience-item ul, 
+.cv-container .responsibilities {
+    margin-left: 20px;
+    color: #555;
+}
+
+.cv-container .experience-item li {
+    margin-bottom: 5px;
+}
+
+.cv-container .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.cv-container .skill-category h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.cv-container .skill-category ul {
+    list-style: none;
+}
+
+.cv-container .skill-category li {
+    padding: 6px 0;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+.cv-container .skill-category li:before {
+    content: "▪";
+    color: #667eea;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* =========================================================
    NAVBAR (RÉTRÉCIE)
    ========================================================= */
 .site-navbar {
@@ -45,7 +199,6 @@ h1, h2, h3, h4,
     right: 0;
     background-color: #000000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    /* Réduction du padding vertical pour moins de hauteur */
     padding: 12px 60px; 
 }
 
@@ -60,7 +213,6 @@ h1, h2, h3, h4,
 }
 
 .site-logo img {
-    /* Taille du logo conservée ou réduite à 50px */
     max-height: 50px; 
     width: auto;
 }
@@ -94,10 +246,9 @@ h1, h2, h3, h4,
 }
 
 .site-navbar .site-navigation .site-menu > li > a {
-    /* Réduction du padding autour des liens de navigation */
     padding: 8px 18px; 
     color: #fff;
-    font-size: 15px; /* Réduction de la taille d'écriture */
+    font-size: 15px;
     letter-spacing: .15rem;
     text-transform: uppercase;
     font-weight: 400;
@@ -110,7 +261,7 @@ h1, h2, h3, h4,
 }
 
 /* =========================================================
-   MENU MOBILE (INCHANGÉ)
+   MENU MOBILE
    ========================================================= */
 .site-mobile-menu {
     width: 300px;
@@ -134,7 +285,7 @@ h1, h2, h3, h4,
 }
 
 /* =========================================================
-   HERO SECTION (RÉTRÉCIE)
+   HERO SECTION
    ========================================================= */
 .hero {
     background-size: cover;
@@ -165,37 +316,30 @@ h1, h2, h3, h4,
 
 .hero h1 {
     font-weight: 700;
-    /* Réduction de la taille du titre principal */
     font-size: 3.5rem; 
-    margin-bottom: 20px; /* Réduction de la marge */
+    margin-bottom: 20px;
 }
 
 .hero h2 {
     color: rgba(255, 255, 255, 0.7);
-    /* Réduction de la taille d'écriture */
     font-size: 18px; 
 }
 
 /* =========================================================
-   ÉQUIPES VS (Page d'accueil) - SÉPARATION VERTICALE NETTE
+   ÉQUIPES VS
    ========================================================= */
-
-/* Conteneur Flex pour les deux cartes */
 .team-vs {
     background-color: #0d0f13; 
     overflow: hidden;
     border-radius: 15px;
-    /* Réduction du chevauchement avec la section Hero */
     margin-top: -60px; 
     position: relative;
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
     padding: 0;
-    /* Réduction de la hauteur minimale */
     min-height: 220px; 
     display: flex;
 }
 
-/* Style de base des cartes .team-1 et .team-2 (vos sélecteurs HTML) */
 .team-vs .team-1,
 .team-vs .team-2 {
     position: relative;
@@ -206,7 +350,6 @@ h1, h2, h3, h4,
     color: #ffffff;
 }
 
-/* 1. MCLAREN (team-1) : COULEUR ET SÉPARATION DROITE */
 .team-vs .team-1 {
     background: none !important;
     background-color: #ff8700 !important; 
@@ -215,7 +358,6 @@ h1, h2, h3, h4,
     border-radius: 15px 0 0 15px;
 }
 
-/* 2. MERCEDES (team-2) : COULEUR ET SÉPARATION GAUCHE */
 .team-vs .team-2 {
     background: #383838; 
     z-index: 1;
@@ -223,40 +365,32 @@ h1, h2, h3, h4,
     border-radius: 0 15px 15px 0;
 }
 
-/* Styles internes */
 .team-vs .team-details {
-    /* Réduction du padding interne des cartes d'équipe */
     padding: 30px 20px; 
 }
 
-/* LOGOS */
 .team-vs .team-details img {
-    /* Taille des logos conservée ou réduite à 100px */
     width: 100px; 
     height: auto;
     margin-bottom: 10px;
     opacity: 0.8;
 }
 
-/* TITRES D'ÉQUIPE (h3) */
 .team-vs h3 {
-    /* Réduction de la taille du titre d'équipe */
     font-size: 22px; 
     color: #fff;
     font-weight: 900;
     margin-bottom: 5px;
 }
 
-/* CLASSEMENT TOP 1 / TOP 2 (h4) : BLANC */
 .team-vs h4 { 
     color: #ffffff !important; 
     font-weight: 700;
     margin-top: 5px;
-    margin-bottom: 10px; /* Réduction de l'espace après le classement */
-    font-size: 16px; /* Réduction de la taille du classement */
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-/* PILOTES (ul li) */
 .team-vs .team-details ul {
     padding: 0;
     list-style: none;
@@ -264,20 +398,18 @@ h1, h2, h3, h4,
 
 .team-vs .team-details ul li {
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 4px; /* Réduction de l'espace entre les pilotes */
-    font-size: 14px; /* Réduction de la taille d'écriture */
+    margin-bottom: 4px;
+    font-size: 14px;
 }
 
-/* Nettoyage des <hr> dans la carte Mercedes */
 .team-vs .team-2 hr {
     display: none;
 }
 
 /* =========================================================
-   ACTUALITÉS (RÉTRÉCIES)
+   ACTUALITÉS
    ========================================================= */
 .latest-news {
-    /* Réduction du padding des actualités */
     padding: 70px 40px; 
     margin-bottom: 30px;
 }
@@ -287,7 +419,6 @@ h1, h2, h3, h4,
 }
 
 .latest-news .title-section .heading {
-    /* Réduction de la taille du titre de section */
     font-size: 32px; 
     font-weight: 900;
     color: #000;
@@ -297,7 +428,7 @@ h1, h2, h3, h4,
 .latest-news .row .col-md-4 {
     padding-left: 15px;
     padding-right: 15px;
-    margin-bottom: 30px; /* Réduction de la marge basse */
+    margin-bottom: 30px;
 }
 
 .latest-news .post-entry {
@@ -305,7 +436,7 @@ h1, h2, h3, h4,
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Légère réduction de l'ombre */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -317,11 +448,10 @@ h1, h2, h3, h4,
 .latest-news .post-entry img {
     transition: .3s all ease;
     transform: scale(1);
-    border: 4px solid black; /* Réduction de la bordure */
+    border: 4px solid black;
     border-radius: 15px;
     width: 100%;
     height: auto;
-    /* Réduction de la hauteur minimale des images d'actualité */
     min-height: 250px; 
     object-fit: cover;
 }
@@ -364,14 +494,13 @@ h1, h2, h3, h4,
 
 .latest-news .post-entry .caption .caption-inner {
     position: absolute;
-    bottom: 20px; /* Réduction de l'espacement interne */
+    bottom: 20px;
     left: 20px; 
     right: 20px; 
     pointer-events: none;
 }
 
 .latest-news .post-entry .caption .caption-inner h3 {
-    /* Réduction de la taille du titre de l'article */
     font-size: 18px; 
     font-weight: 700;
     color: #fff;
@@ -390,7 +519,7 @@ h1, h2, h3, h4,
 }
 
 .latest-news .post-entry .author .img img {
-    width: 35px; /* Réduction de la taille de la photo de l'auteur */
+    width: 35px;
     height: 35px;
     border-radius: 50%;
     border: 1px solid #fff;
@@ -398,14 +527,12 @@ h1, h2, h3, h4,
 }
 
 .latest-news .post-entry .author .text h4 {
-    /* Réduction de la taille d'écriture */
     font-size: 13px; 
     margin-bottom: 2px;
     color: #fff;
 }
 
 .latest-news .post-entry .author .text span {
-    /* Réduction de la taille d'écriture */
     font-size: 11px; 
     color: rgba(255, 255, 255, 0.7);
 }
@@ -423,11 +550,10 @@ h1, h2, h3, h4,
 }
 
 /* =========================================================
-   SECTION SOMBRE (Prochain GP) - RÉTRÉCIE
+   SECTION SOMBRE (Prochain GP)
    ========================================================= */
 .site-section.bg-dark {
     background: #0d0f13;
-    /* Réduction du padding de la section */
     padding: 50px 0; 
 }
 
@@ -436,7 +562,6 @@ h1, h2, h3, h4,
 }
 
 .widget-title {
-    /* Réduction du padding du titre de widget */
     padding: 12px 18px; 
     color: #fff;
     background-color: #ee1e46;
@@ -445,36 +570,31 @@ h1, h2, h3, h4,
 .widget-title h3 {
     margin: 0;
     padding: 0;
-    /* Réduction de la taille d'écriture */
     font-size: 15px; 
     color: #fff;
     font-weight: 700;
 }
 
 .widget-body {
-    /* Réduction du padding du corps du widget */
     padding: 18px; 
 }
 
 .widget-vs h4 {
-    /* Réduction de la taille des titres de match */
     font-size: 18px; 
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .widget-vs-contents p {
-    /* Réduction de la taille d'écriture */
     font-size: 14px; 
 }
 
-
 /* =========================================================
-   TABLEAUX (Page Classement) - RÉTRÉCIS
+   TABLEAUX (Page Classement)
    ========================================================= */
 .page-container {
     max-width: 1200px; 
-    padding-top: 90px; /* Ajuste le padding pour le nouveau header */
+    padding-top: 90px;
     margin: 0 auto;
     padding-left: 40px; 
     padding-right: 40px; 
@@ -485,12 +605,11 @@ h1, h2, h3, h4,
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 25px; /* Réduction du padding autour du tableau */
+    padding: 25px;
     margin-bottom: 25px;
 }
 
 .main-title {
-    /* Réduction de la taille du titre */
     font-size: 28px; 
     font-weight: 900;
     color: #000000;
@@ -501,53 +620,44 @@ h1, h2, h3, h4,
 }
 
 .f1-table thead th {
-    /* Réduction de la taille d'écriture */
     font-size: 11px;
     padding: 12px;
 }
 
 .f1-table tbody td {
     padding: 12px 15px; 
-    /* Réduction de la taille d'écriture */
     font-size: 14px;
 }
 
 .pos-cell {
-    /* Réduction de la taille d'écriture */
     font-size: 16px;
 }
 
 .driver-name-text {
-    /* Réduction de la taille d'écriture */
     font-size: 15px;
 }
 
 .team-name-display {
-    /* Réduction de la taille d'écriture */
     font-size: 13px;
 }
 
 .points-cell {
-    /* Réduction de la taille d'écriture */
     font-size: 16px;
 }
 
-/* Masquer les icônes */
 .driver-icon,
 .team-logo-icon {
     display: none !important;
 }
 
 /* =========================================================
-   FOOTER (RÉTRÉCI)
+   FOOTER
    ========================================================= */
 footer {
     background: #1a1e25;
     color: rgba(255, 255, 255, 0.5);
-    /* Réduction du padding du footer */
     padding: 15px 40px; 
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    /* Réduction de la taille d'écriture */
     font-size: 14px; 
 }
 
@@ -560,11 +670,28 @@ footer a:hover {
 }
 
 /* =========================================================
-   RESPONSIVE (AJUSTÉ)
+   STYLES IMPRESSION (CV)
+   ========================================================= */
+@media print {
+    body.cv-page {
+        background: white;
+        padding: 0;
+    }
+    .cv-container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+    .site-navbar {
+        display: none;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
    ========================================================= */
 @media (max-width: 991.98px) {
     .hero h1 {
-        font-size: 2rem; /* Réduction mobile du titre Hero */
+        font-size: 2rem;
     }
     
     .hero h2 {
@@ -591,11 +718,11 @@ footer a:hover {
     }
 
     .site-navbar {
-        padding: 8px 15px; /* Ajustement mobile du header */
+        padding: 8px 15px;
     }
 
     .site-logo img {
-        max-height: 35px; /* Ajustement mobile du logo */
+        max-height: 35px;
     }
 
     .latest-news {
@@ -620,5 +747,27 @@ footer a:hover {
 
     .team-vs .team-details img {
         width: 70px;
+    }
+    
+    /* Responsive CV */
+    body.cv-page {
+        padding: 80px 10px 20px 10px;
+    }
+    
+    .cv-container .header {
+        padding: 30px 20px;
+    }
+    
+    .cv-container .header h1 {
+        font-size: 2em;
+    }
+    
+    .cv-container .content {
+        padding: 25px;
+    }
+    
+    .cv-container .contact-info {
+        flex-direction: column;
+        gap: 10px;
     }
 }
