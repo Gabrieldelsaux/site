@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+   NAVBAR (RÉTRÉCIE)
+   ========================================================= */
+.site-navbar {
+    margin-bottom: 0px;
+    z-index: 1999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 12px 60px; 
+}
+
+.site-logo {
+    position: relative;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.site-logo a {
+    color: #fff;
+}
+
+.site-logo img {
+    max-height: 50px; 
+    width: auto;
+}
+
+.site-navbar .site-navigation .site-menu {
+    margin-bottom: 0;
+}
+
+.site-navbar .site-navigation .site-menu .active > a {
+    display: inline-block;
+    position: relative;
+}
+
+.site-navbar .site-navigation .site-menu .active > a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: #fff;
+}
+
+.site-navbar .site-navigation .site-menu a {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+.site-navbar .site-navigation .site-menu > li {
+    display: inline-block;
+}
+
+.site-navbar .site-navigation .site-menu > li > a {
+    padding: 8px 18px; 
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+.site-navbar .site-navigation .site-menu > li > a:hover {
+    color: #ee1e46;
+}
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+.site-mobile-menu {
+    width: 300px;
+    position: fixed;
+    right: 0;
+    z-index: 2000;
+    padding-top: 20px;
+    background: #fff;
+    height: calc(100vh);
+    transform: translateX(110%);
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    transition: .3s all ease-in-out;
+}
+
+.offcanvas-menu .site-mobile-menu {
+    transform: translateX(0%);
+}
+
+.site-menu-toggle {
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   FORMULAIRE DE CONTACT
+   ========================================================= */
+body.contact-page {
+    background: #000000;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+/* Si votre page contact utilise la structure Bootstrap */
+.contact-page .container,
+.contact-page .form-container {
+    margin-top: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.form-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select {
+    cursor: pointer;
+    background-color: white;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    background: #1a1e25;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 15px 40px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px; 
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer a:hover {
+    color: #ee1e46;
+}
+
+/* =========================================================
+   STYLES IMPRESSION (CV)
+   ========================================================= */
+@media print {
+    body.cv-page {
+        background: white;
+        padding: 0;
+    }
+    .cv-container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+    .site-navbar {
+        display: none;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 991.98px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .page-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 70px; 
+    }
+
+    .table-wrapper-card {
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .f1-table tbody td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .site-navbar {
+        padding: 8px 15px;
+    }
+
+    .site-logo img {
+        max-height: 35px;
+    }
+
+    .latest-news {
+        padding: 30px 10px; 
+    }
+    
+    .latest-news .post-entry .caption .caption-inner h3 {
+        font-size: 16px;
+    }
+    
+    .latest-news .post-entry .author .text h4 {
+        font-size: 12px;
+    }
+    
+    .team-vs .team-details {
+        padding: 20px 15px;
+    }
+
+    .team-vs h3 {
+        font-size: 16px;
+    }
+
+    .team-vs .team-details img {
+        width: 70px;
+    }
+    
+    body.cv-page {
+        padding: 80px 10px 20px 10px;
+    }
+    
+    .cv-container .header {
+        padding: 30px 20px;
+    }
+    
+    .cv-container .header h1 {
+        font-size: 2em;
+    }
+    
+    .cv-container .content {
+        padding: 25px;
+    }
+    
+    .cv-container .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .form-container h1 {
+        font-size: 24px;
+    }
+}

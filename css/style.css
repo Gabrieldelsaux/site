@@ -46,7 +46,7 @@ h1, h2, h3, h4,
    ========================================================= */
 body.cv-page {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 100px 20px 40px 20px; /* Padding top augmenté pour la navbar */
+    padding: 100px 20px 40px 20px;
     min-height: 100vh;
 }
 
@@ -59,7 +59,6 @@ body.cv-page {
     overflow: hidden;
 }
 
-/* Header CV (avec dégradé violet) */
 .cv-container .header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -97,7 +96,6 @@ body.cv-page {
     gap: 5px;
 }
 
-/* Contenu CV */
 .cv-container .content {
     padding: 40px;
 }
@@ -650,124 +648,3 @@ body.cv-page {
     display: none !important;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-footer {
-    background: #1a1e25;
-    color: rgba(255, 255, 255, 0.5);
-    padding: 15px 40px; 
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 14px; 
-}
-
-footer a {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-footer a:hover {
-    color: #ee1e46;
-}
-
-/* =========================================================
-   STYLES IMPRESSION (CV)
-   ========================================================= */
-@media print {
-    body.cv-page {
-        background: white;
-        padding: 0;
-    }
-    .cv-container {
-        box-shadow: none;
-        max-width: 100%;
-    }
-    .site-navbar {
-        display: none;
-    }
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-@media (max-width: 991.98px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero h2 {
-        font-size: 16px;
-    }
-
-    .page-container {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 70px; 
-    }
-
-    .table-wrapper-card {
-        padding: 15px;
-    }
-
-    .main-title {
-        font-size: 20px;
-    }
-
-    .f1-table tbody td {
-        padding: 8px 6px;
-        font-size: 11px;
-    }
-
-    .site-navbar {
-        padding: 8px 15px;
-    }
-
-    .site-logo img {
-        max-height: 35px;
-    }
-
-    .latest-news {
-        padding: 30px 10px; 
-    }
-    
-    .latest-news .post-entry .caption .caption-inner h3 {
-        font-size: 16px;
-    }
-    
-    .latest-news .post-entry .author .text h4 {
-        font-size: 12px;
-    }
-    
-    .team-vs .team-details {
-        padding: 20px 15px;
-    }
-
-    .team-vs h3 {
-        font-size: 16px;
-    }
-
-    .team-vs .team-details img {
-        width: 70px;
-    }
-    
-    /* Responsive CV */
-    body.cv-page {
-        padding: 80px 10px 20px 10px;
-    }
-    
-    .cv-container .header {
-        padding: 30px 20px;
-    }
-    
-    .cv-container .header h1 {
-        font-size: 2em;
-    }
-    
-    .cv-container .content {
-        padding: 25px;
-    }
-    
-    .cv-container .contact-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
